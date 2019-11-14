@@ -1,0 +1,41 @@
+.jumbotron{
+    border-bottom: black solid 10px;
+    text-align: center;
+    background-color: white;
+    color: black;
+}
+
+.table{
+    max-width: 980px;
+    margin: auto;
+}
+tr {
+    height: 60px;
+}
+td{
+    color: black;
+}
+.time-col{
+    width: 100px;
+    text-align: center;
+}
+
+.info-col{
+    background: lightgreen;
+    text-align: center;
+}
+
+.save-button{
+    background: #06aed5;
+    width: 100px;
+    text-align: center;
+    vertical-align: center;
+}
+
+.user-input{
+    background-color: inherit;
+    height: 100%;
+    width: 100%;
+    border: none;
+}
+
