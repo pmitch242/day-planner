@@ -25,10 +25,14 @@ td{
     text-align: center;
 }
 
-.save-button{
+.save-col{
     background: #06aed5;
     width: 100px;
     text-align: center;
+}
+
+.save-button:hover{
+    cursor: pointer;
 }
 
 .user-input{
