@@ -34,6 +34,7 @@ td{
 /* change curser when hovering over the save button */
 .save-button:hover{
     cursor: pointer;
+    color: white;
 }
 
 .user-input{
