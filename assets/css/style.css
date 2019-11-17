@@ -37,6 +37,10 @@ td{
     color: white;
 }
 
+i{
+    padding: 24px 12px;
+}
+
 .user-input{
     background-color: inherit;
     height: 52px;
@@ -44,3 +48,9 @@ td{
     border: none;
 }
 
+@media screen and (max-width: 480px){
+    .info-col{
+        width: 60%;
+    }  
+
+  }
