@@ -34,10 +34,27 @@ $(document).ready(function () {
 
         console.log(results.id);
         var time = results.id;
-        console.log(time);
+        console.log("hour " + time);
 
         localStorage.setItem("hour " + time, data);
 
     });
 
+    //Function to change textarea color
+    function changeColor(){
+        console.log("The current hour is " + moment().hour());
+
+        for (i=9; i<=17; i++){
+            var currentTime = moment().hour();
+
+            if(currentTime === i){
+                $("." + i).attr("style", "background-color: red");
+            }
+
+            else if(currentTime > i){
+                $("." + i).attr("style", "background-color: lightgray");
+            }
+        }
+    }
+    changeColor();
 });
