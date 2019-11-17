@@ -1,36 +1,43 @@
-// ================VARIABLES================
-var infoCol = $(".info-col");
-var saveButton = $(".save-button");
-var userInput = $(".user-input");
-let data;
 
-// ================FUNCTIONS================
+$(document).ready(function () {
+    // ================VARIABLES================
+    var infoCol = $(".info-col");
+    var saveButton = $(".save-button");
+    var userInput = $(".user-input");
+    let data;
+
+    // ================FUNCTIONS================
 
 
-// Function to use save button to save textarea value to localStorage
-saveButton.click(function(){
-    event.preventDefault();
-    // test to see button was pressed
-    console.log("I was pressed");
+    // Function to pull results from localStorage
+    for (var i = 9; i <= 17; i++){
+        $('#' + i).val(localStorage.getItem("hour " + i));
+    }
 
-    var a = this;
-    // console.log(a);
-    // console.log(a.previousElementSibling);
-    console.log(a.previousElementSibling.firstElementChild);
-    console.log($(a).prev());
-    // console.log($(results))
-    var results = a.previousElementSibling.firstElementChild;
-    console.log(results);
-    console.log($(results));
-    data = $(results).val().trim();
-    console.log(data);
+    // Function to use save button to save textarea value to localStorage
+    saveButton.click(function () {
+        event.preventDefault();
+        // test to see button was pressed
+        console.log("I was pressed");
 
-    console.log(results.id);
-    var time = results.id;
-    console.log(time);
+        var a = this;
+        // console.log(a);
+        // console.log(a.previousElementSibling);
+        console.log(a.previousElementSibling.firstElementChild);
+        console.log($(a).prev());
+        // console.log($(results))
+        var results = a.previousElementSibling.firstElementChild;
+        console.log(results);
+        console.log($(results));
+        data = $(results).val().trim();
+        console.log(data);
 
-    localStorage.setItem(time, data);
+        console.log(results.id);
+        var time = results.id;
+        console.log(time);
+
+        localStorage.setItem("hour " + time, data);
+
+    });
 
 });
-
-
