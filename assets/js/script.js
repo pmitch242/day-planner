@@ -7,7 +7,13 @@ $(document).ready(function () {
     let data;
 
     // ================FUNCTIONS================
+    console.log("The current hour is " + moment().hour());
+    $("#exact-time").text(moment().format('MMMM Do YYYY, h:mm:ss a'));
 
+    setInterval(function () {
+        $("#exact-time").text(moment().format('MMMM Do YYYY, h:mm:ss a'));
+        changeColor();
+    }, 1000);
 
     // Function to pull results from localStorage
     for (var i = 9; i <= 17; i++){
@@ -40,9 +46,8 @@ $(document).ready(function () {
 
     });
 
-    //Function to change textarea color
+    //Function to change textarea color depending on hour of the day
     function changeColor(){
-        console.log("The current hour is " + moment().hour());
 
         for (i=9; i<=17; i++){
             var currentTime = moment().hour();
@@ -56,5 +61,7 @@ $(document).ready(function () {
             }
         }
     }
+
     changeColor();
+
 });
