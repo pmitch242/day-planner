@@ -48,6 +48,7 @@ i{
     border: none;
 }
 
+/* Adjust info column for smaller screens */
 @media screen and (max-width: 480px){
     .info-col{
         width: 60%;
